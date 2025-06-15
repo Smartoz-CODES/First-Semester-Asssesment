@@ -1,0 +1,31 @@
+@media (max-width: 36rem) {
+  /* 576px / 16px = 36rem */
+  /* 36rem * 16px = 576px */
+
+  html {
+    font-size: 43.75%;
+    /* 7px / 16px = 43.75% */
+  }
+
+  .calculator {
+    width: 350px;
+  }
+
+  .btn {
+    width: auto;
+  }
+}
+
+@media (max-width: 23rem) {
+  /* 357px / 16px = 23rem */
+  /* 23rem * 16px = 368px */
+
+  html {
+    font-size: 37.5%;
+    /* 6px / 16px = 37.5% */
+  }
+
+  .btn {
+    width: auto;
+  }
+}

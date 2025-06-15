@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="./styles/app.css" />
+    <link rel="stylesheet" href="./styles/queries.css" />
+    <script src="./Js/script.js" defer></script>
+  </head>
+  <body>
+    <main class="calculator">
+      <!-- Calculator Display -->
+      <div class="calculator-display">0</div>
+
+      <!-- Calculator Buttons -->
+      <section class="calculator-buttons">
+        <!-- Row 1 -->
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn btn-operator" data-value="*">×</button>
+        <button class="btn btn-operator" data-value="/">÷</button>
+        <!-- Row 2 -->
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn btn-operator" data-value="+">+</button>
+        <button class="btn btn-operator" data-value="-">-</button>
+        <!-- Row 3 -->
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn btn-operator" data-value="%">%</button>
+        <button class="btn btn-operator" data-value="^">^</button>
+        <!-- Row 4 -->
+        <button class="btn" data-value=".">.</button>
+        <button class="btn" data-value="0">0</button>
+        <button class="btn btn-clear" data-value="clear">
+          <img src="./assets/images/btn.png" alt="Backspace-button" />
+        </button>
+        <button class="btn btn-clear-all" data-value="c">C</button>
+        <button class="btn btn-equal" data-value="=">=</button>
+      </section>
+
+      <!-- Recent Arithemetic History -->
+      <div class="calculator-history">
+        <h4>Recent History</h4>
+      </div>
+    </main>
+  </body>
+</html>
