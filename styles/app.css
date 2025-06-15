@@ -52,6 +52,7 @@ body {
   align-items: center;
   height: var(--body-height);
   width: 100%;
+  overflow: hidden;
 }
 
 /* Calculator Container */
@@ -71,7 +72,8 @@ body {
   border-radius: 2rem;
   margin-bottom: 1.5rem;
   box-shadow: 0 2rem 3rem var(--disp-shadow);
-  overflow-x: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Grid Layout for Butttons */
