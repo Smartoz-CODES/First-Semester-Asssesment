@@ -31,8 +31,6 @@
   --body-height: 100vh;
 }
 
-
-
 /* ======UNIVERSAL SELECTOR====== */
 * {
   margin: 0;
@@ -59,7 +57,7 @@ body {
 .calculator {
   background-color: var(--calc-bg);
   padding: 3rem;
-  width: 70rem
+  width: 70rem;
 }
 
 /* Calculator Display */

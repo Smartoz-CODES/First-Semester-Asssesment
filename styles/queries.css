@@ -21,7 +21,26 @@
   }
 
   .calculator-buttons {
-    gap: 3rem;
+    display: grid;
+    width: 100%;
+    gap: 1.2rem;
+    padding: 0 1rem;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 17rem;
+    margin: 2px;
+    border-radius: 7rem;
+  }
+
+  .btn-operator,
+  .btn-clear-all,
+  .btn-equal {
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
   }
 }
 
@@ -37,8 +56,8 @@
   .btn {
     width: 100%;
     max-width: 10rem;
-    min-width: 4.4rem;
-    min-height: 4.4rem;
+    /* min-width: 4.4rem;
+    min-height: 4.4rem; */
     border-radius: 4rem;
   }
 
@@ -87,14 +106,30 @@
   }
 
   .calculator-buttons {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 5 1fr;
     gap: 0.5rem;
     justify-content: center;
+    width: 100%;
   }
 
   .btn {
-    flex: 1 1 1 1 1 20%;
-    max-width: 20%;
+    max-width: 100%;
+    min-width: 0;
+    aspect-ratio: 1;
+  }
+
+  .btn-operator,
+  .btn-clear-all,
+  .btn-equal {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+  }
+
+  body {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
   }
 }
