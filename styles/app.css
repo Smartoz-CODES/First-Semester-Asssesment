@@ -51,6 +51,7 @@ body {
   justify-content: center;
   align-items: center;
   height: var(--body-height);
+  width: 100%;
 }
 
 /* Calculator Container */
