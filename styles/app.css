@@ -1,3 +1,39 @@
+/* ========= DEFINING VARIABLES IN THE ROOT PSEUDO CLASS ========= */
+:root {
+  /* FONT SIZE */
+  --text-sm: 1.4rem;
+  --text-disp: 2rem;
+  --text-btn: 2.4rem;
+  --text-btn-operator: 3.2rem;
+  --text-btn-eq: 2.8rem;
+
+  /* FONT-WEIGHT */
+  --font-weight-small: 400;
+  --font-weight-normal: 500;
+  --font-weight-semi-bold: 600;
+
+  /* FONT FAMILY */
+  --font-family: "Inter", sans-serif;
+
+  /* COLORS */
+  --calc-bg: #242530;
+  --calc-display-bg: #3a3f77;
+  --disp-shadow: #00000040;
+  --primary-base: #404258;
+  --primary-shade: #3c3d5c;
+  --secondary-base: #f49d1a;
+  --secondary-shade: #f89f0a;
+  --grey-base: #b2b2b2;
+  --white: #fff;
+  --black: #000000;
+
+  /* OTHER VARIABLE */
+  --body-height: 100vh;
+}
+
+
+
+/* ======UNIVERSAL SELECTOR====== */
 * {
   margin: 0;
   padding: 0;
@@ -9,31 +45,31 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background-color: #ffffff;
+  font-family: var(--font-family);
+  background-color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: var(--body-height);
 }
 
 /* Calculator Container */
 .calculator {
-  background-color: #242530;
+  background-color: var(--calc-bg);
   padding: 3rem;
-  width: 400px;
+  width: 70rem
 }
 
 /* Calculator Display */
 .calculator-display {
-  background-color: #3a3f77;
-  color: white;
-  font-size: 2rem;
+  background-color: var(--calc-display-bg);
+  color: var(--white);
+  font-size: var(--text-disp);
   text-align: right;
-  padding: 2rem 1.5rem;
+  padding: 3rem 1.5rem;
   border-radius: 2rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2rem 3rem #00000040;
+  box-shadow: 0 2rem 3rem var(--disp-shadow);
   overflow-x: auto;
 }
 
@@ -46,30 +82,30 @@ body {
 
 /* Base Button Styles */
 .btn {
-  font-size: 2.4rem;
-  font-weight: 400;
-  width: 5.5rem;
-  height: 5.5rem;
+  font-size: var(--text-btn);
+  font-weight: var(--font-weight-small);
+  width: 100%;
+  max-width: 13rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3px;
+  margin: 0.3rem;
   border: none;
-  border-radius: 1.5rem;
+  border-radius: 5rem;
   cursor: pointer;
-  color: #fff;
-  background-color: #404258;
+  color: var(--white);
+  background-color: var(--primary-base);
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .btn:hover {
-  background-color: #3c3d5c;
+  background-color: var(--primary-shade);
   transform: scale(1.05);
 }
 
 .btn:focus {
-  outline: 2px solid #f49d1a;
-  outline-offset: 2px;
+  outline: 0.2rem solid var(--secondary-base);
+  outline-offset: 0.2rem;
 }
 
 /* BackSpace Button */
@@ -85,27 +121,28 @@ body {
 
 /* Operator Buttons */
 .btn-operator {
-  background-color: #f49d1a;
+  background-color: var(--secondary-base);
   border-radius: 50%;
-  width: 5.5rem;
-  height: 5.5rem;
-  font-size: 3.2rem;
-  font-weight: 500;
+  width: 9rem;
+  height: 9rem;
+  font-size: var(--text-btn-operator);
+  font-weight: var(--font-weight-normal);
 }
 
 .btn-operator:hover {
-  background-color: #f89f0a;
+  background-color: var(--secondary-shade);
 }
 
 /* Clear All Input Button */
 .btn-clear-all {
-  background-color: #f49d1a;
-  width: 5.5rem;
-  height: 5.5rem;
-  font-size: 2.4rem;
-  font-weight: 600;
+  background-color: var(--secondary-base);
+  width: 100%;
+  width: 9rem;
+  height: 9rem;
+  font-size: var(--text-btn);
+  font-weight: var(--font-weight-semi-bold);
   border-radius: 1.5rem;
-  color: #fff;
+  color: var(--white);
   border-radius: 50%;
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
@@ -116,21 +153,21 @@ body {
 
 /* Equal Button */
 .btn-equal {
-  background-color: #b2b2b2;
-  color: #000000;
-  font-size: 2.8rem;
-  width: 5.5rem;
-  height: 5.5rem;
-  font-weight: 500;
+  background-color: var(--grey-base);
+  color: var(--black);
+  font-size: var(--text-btn-eq);
+  width: 9rem;
+  height: 9rem;
+  font-weight: var(--font-weight-normal);
   border-radius: 50%;
 }
 
 /* Arithemetic Operation History */
 .calculator-history {
   margin-top: 3rem;
-  background-color: #3a3f77;
-  color: #fff;
-  font-size: 1.4rem;
+  background-color: var(--calc-display-bg);
+  color: var(--white);
+  font-size: var(--text-sm);
   padding: 2rem;
   border-radius: 1rem;
   max-height: 150px;
@@ -143,12 +180,12 @@ body {
 }
 
 .calculator-history::-webkit-scrollbar-thumb {
-  background-color: #f49d1a;
-  border-radius: 10px;
+  background-color: var(--secondary-base);
+  border-radius: 1rem;
 }
 
 .calculator-history h4 {
   margin-bottom: 0.5rem;
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-normal);
 }
