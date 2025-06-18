@@ -48,16 +48,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: var(--body-height);
+  min-height: var(--body-height);
   width: 100%;
-  overflow: hidden;
+  padding: 2rem;
+  overflow: auto;
 }
 
 /* Calculator Container */
 .calculator {
   background-color: var(--calc-bg);
   padding: 3rem;
-  width: 70rem;
+  width: 100%;
+  max-width: 70rem;
 }
 
 /* Calculator Display */
